@@ -16,3 +16,11 @@ jobs:
         run: npm ci
       - name: Tests
         run: npm test
+      - name: Publication de l'artefact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifact
+          path: |
+            index.js
+            package.json
+            junit.xml
